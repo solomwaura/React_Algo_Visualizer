@@ -2,12 +2,13 @@
     width: 2em;
     height: 200px;
     margin: 0 1em;
-    transform-style: preserve-3;
+    transform-style: preserve-3d;
     transform: rotateX(-20deg) rotateY(-30deg);
 }
 .side{
     width: 100%;
     height: 100%;
+    transform-style: preserve-3d;
     position: absolute;
     background: rgba(254, 254, 254, 0.25);
 }
@@ -26,18 +27,18 @@
     height: 34px;
     transform-origin: top;
     transform: rotateX('-90deg');
-    background: rgba(254, 254, 254, 0.15);
+    background: rgba(49, 74, 234, 0.15);
 }
 .bottom{
     height: 34px;
     transform-origin: top;
     transform: rotateX('-90deg');
     background: rgba(225, 0, 120, 0.15);
-    box-shadow: rgba(225, 0, 120, 0.15);
+    box-shadow: rgba(225, 0, 220, 0.15);
     transition: 0.3s
 }
 color-bar {
-    background: rgba(225, 0, 120, 0.15) ;
+    background: rgba(32, 233, 22, 0.15) ;
     box-shadow: rgba(225, 0, 120, 0.15);
     transition: 0.3s;
 }
@@ -46,4 +47,27 @@ color-bar {
     transform: rotate(-90deg);
     height: 25px;
     outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number']{
+    -moz-appearance: textfield;
+}
+
+.quantity-button{
+    text-align: center;
+    background: rgba(6, 201, 62, 0.5);
+    margin: 1px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    
+}
+.quantity-button:hover{
+    
 }
