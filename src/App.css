@@ -1,3 +1,5 @@
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"); /* Using a url */
 .App {
   text-align: center;
 }
@@ -19,4 +21,30 @@
   border-radius: 2em;
   padding: 0 1em;
   background-color: #818181;
+}
+.controller{
+  background: #555;
+  margin: 0 1em;
+  border: 1px solid;
+  height: 3em;
+  width: 3em;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.control-panel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control-buttons{
+  height: 4em;
+  width: 15em;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
