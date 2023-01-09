@@ -1,8 +1,8 @@
-import react, {Component} from 'react'
+import {Component} from 'react'
 import './App.css';
 import Bars from './components/Bars';
 import BubbleSort from './algorithms/Bs';
-import * as React from 'react';
+
 
 // icons
 
@@ -40,7 +40,7 @@ class App extends Component {
      this.setState({
       arraySteps: steps,
       colorSteps : colorSteps
-     })
+     });
    }
    clearTimeouts = () =>{
     this.state.timeouts.forEach((timeout) => clearTimeout(timeout));
@@ -50,10 +50,10 @@ class App extends Component {
    }
 
    clearColorKey = () =>{
-    let blankKey = new Array(this.state.count.fill(0));
+    let blankKey = new Array(this.state.count).fill(0);
     this.setState({
       colorKey: blankKey,
-      colorSteps: {blankKey}
+      colorSteps: [blankKey]
     })
    }
    generateRandomNumber =(min,max)=>{
@@ -137,7 +137,7 @@ class App extends Component {
      }
    }
   render() { 
-    let myBars = this.state.array.map((value, index) =>(
+    let bars = this.state.array.map((value, index) =>(
     <Bars
       key={index}
        index={index} 
@@ -165,7 +165,7 @@ class App extends Component {
       <div className="app">
         <div className="frame">
           <div className="barsDiv container card" >
-            {myBars}
+            {bars}
           </div>
         </div>
         <div className="control-panel">
