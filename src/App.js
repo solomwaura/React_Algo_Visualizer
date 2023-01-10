@@ -1,4 +1,4 @@
-import {Component} from 'react'
+import React, {Component} from 'react'
 import './App.css';
 import Bars from './components/Bars';
 import BubbleSort from './algorithms/Bs';
@@ -16,6 +16,7 @@ class App extends Component {
     array:[],
     arraySteps: [],
     colorKey: [], 
+    colorSteps: [],
     currentStep :0,
     count :10,
     delay: 100,

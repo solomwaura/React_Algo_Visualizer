@@ -12,7 +12,7 @@ function Bars(index, length, color, changeArray) {
 
     const colors = [['rgba(161,90,241,0.5)','rgba(61,90,241,0.2)'],
                     ['rgba(255,48,79,1)','rgba(255,48,79,0.5)'],
-                    ['rgba(131,232,90,1)','rgba(131,232,98,0.2)'],];
+                    ['rgba(131,232,90,1)','rgba(131,232,98,0.2)']];
 // const barStyle = {
 
 //     height: length
@@ -28,7 +28,7 @@ function Bars(index, length, color, changeArray) {
         
     }
     const front_bottom = {
-        transform: 'translateY( ${200 - length}px) rotate( -90deg)',
+        transform: 'translateY( ${200 - length}px) rotateX( -90deg)',
         backgroundColor: '${colors[color][0]}',
         boxShadow: '5px 5px 50px 5px ${colors[color][1]}',
         transition: '0.3s'
