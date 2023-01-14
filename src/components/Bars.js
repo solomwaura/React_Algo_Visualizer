@@ -34,6 +34,7 @@ function Bars(index, length, color, changeArray) {
         transition: '0.3s'
     }
     const front_right_left = {
+        height: '${length}px',
         transform: 'translateY( ${200 - length}px)',
         backgroundColor: '${colors[color][0]}',
         boxShadow: '5px 5px 50px 5px ${colors[color][1]}',
@@ -87,12 +88,13 @@ function Bars(index, length, color, changeArray) {
             </div>
             <div className="side front" style={front_bottom}>
                 <div className="color-bar front-color-bar" style={front_bottom}>
-                <input
-                 type="number" 
-                 length={length}
-                  value={len} 
-                  className='input'
-                onChange={handleChange} style={inputStyle} />
+                    <input
+                    type="number" 
+                    placeholder="value"
+                    length={length}
+                    value={len} 
+                    className='input'
+                    onChange={handleChange} style={inputStyle} />
                 </div>
                 
             </div>
