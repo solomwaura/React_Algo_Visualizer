@@ -10,34 +10,32 @@ function Bars(index, length, color, changeArray) {
         setLen(length);
     }, [length]);
 
-    const colors = [['rgba(161,90,241,0.5)','rgba(61,90,241,0.2)'],
-                    ['rgba(255,48,79,1)','rgba(255,48,79,0.5)'],
-                    ['rgba(131,232,90,1)','rgba(131,232,98,0.2)']];
-// const barStyle = {
-
-//     height: length
-// }
+    const colors = [
+        ['rgba(61,90,241,0.5)','rgba(61,90,241,0.2)'],
+        ['rgba(255,48,79,1)','rgba(255,48,79,0.5)'],
+        ['rgba(131,232,90,1)','rgba(131,232,98,0.2)']];
 
     const inputStyle ={
         position: 'relative',
         width: length,
-        top: Math.floor(length/2) - 12,
-        left: Math.floor(length/2) + 13,
+        top: Math.floor(length / 2) - 12,
+        left: -Math.floor(length / 2) + 13,
         border: 'none',
-        background: 'none'
+        background: 'none'  
         
     }
+    
     const front_bottom = {
-        transform: 'translateY( ${200 - length}px) rotateX( -90deg)',
-        backgroundColor: '${colors[color][0]}',
-        boxShadow: '5px 5px 50px 5px ${colors[color][1]}',
+        transform: `translateY( ${200 - length}px) rotateX( -90deg)`,
+        backgroundColor: `${colors[color][0]}`,
+        boxShadow: `5px 5px 50px 5px ${colors[color][1]}`,
         transition: '0.3s'
     }
     const front_right_left = {
-        height: '${length}px',
-        transform: 'translateY( ${200 - length}px)',
-        backgroundColor: '${colors[color][0]}',
-        boxShadow: '5px 5px 50px 5px ${colors[color][1]}',
+        height: `${length}px`,
+        transform: `translateY( ${200 - length}px)`,
+        backgroundColor: `${colors[color][0]}`,
+        boxShadow: `5px 5px 50px 5px ${colors[color][1]}`,
         transition: '0.3s'
     }
     
@@ -89,12 +87,12 @@ function Bars(index, length, color, changeArray) {
             <div className="side front" style={front_bottom}>
                 <div className="color-bar front-color-bar" style={front_bottom}>
                     <input
-                    type="number" 
-                    placeholder="value"
-                    length={length}
-                    value={len} 
-                    className='input'
-                    onChange={handleChange} style={inputStyle} />
+                        type="number" 
+                        placeholder="value"
+                        length={length} 
+                        value={len} 
+                        className='input'
+                        onChange={handleChange} style={inputStyle} />
                 </div>
                 
             </div>
