@@ -14,6 +14,7 @@ import Backward from '@mui/icons-material/ArrowBackIosNew';
 import RotateLeft from '@mui/icons-material/Replay';
 
 import Bar from './components/Bars';
+import Header from './components/header/Header';
 
 class App extends Component {
 	state = {
@@ -156,6 +157,7 @@ class App extends Component {
 	};
 
 	render() {
+		
 		let bars = this.state.array.map((value, index) => (
 			<Bar
 				key={index}
@@ -184,21 +186,46 @@ class App extends Component {
 
 		return (
 			<div className='app'>
-				<div className='frame'>
-					<div className='barsDiv container card'>{bars}</div>
-				</div>
-				<div className='control-pannel'>
-					<div className='control-buttons'>
-						<button className='controller' onClick={this.previousStep}>
-							<Backward />
-						</button>
-						{playButton}
-						<button className='controller' onClick={this.nextStep}>
-							<Forward />
-						</button>
+				<Header />
+				<div className="algorithm">
+					<h3>Buble Sort</h3>
+					<div className='frame'>
+						<br />
+						<div className='barsDiv container card'>{bars}</div>
 					</div>
+					<div className='control-pannel'>
+						<div className='control-buttons'>
+							<button className='controller' onClick={this.previousStep}>
+								<Backward />
+							</button>
+							{playButton}
+							<button className='controller' onClick={this.nextStep}>
+								<Forward />
+							</button>
+						</div>
+					</div>
+					<div className='pannel'></div>
 				</div>
-				<div className='pannel'></div>
+				<div className="algorithm">
+					<h3>Merge Sort</h3>
+					<div className='frame'>
+						<br />
+						<div className='barsDiv container card'>{bars}</div>
+					</div>
+					<div className='control-pannel'>
+						<div className='control-buttons'>
+							<button className='controller' onClick={this.previousStep}>
+								<Backward />
+							</button>
+							{playButton}
+							<button className='controller' onClick={this.nextStep}>
+								<Forward />
+							</button>
+						</div>
+					</div>
+					<div className='pannel'></div>
+				</div>
+
 			</div>
 		);
 	}

@@ -1,0 +1,13 @@
+.headerContainer{
+    background-color: rgb(33, 224, 103);
+    margin: 0px 0px;
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 15px;
+}

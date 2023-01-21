@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+ 
+}
+.app{
+  width: 100%;
+  
+  align-content: center;
 }
 
 .frame{
@@ -41,6 +47,7 @@
 .control-buttons{
   height: 4em;
   width: 15em;
+  margin: 0 auto;
   background-color: #fff;
   display: flex;
   justify-content: center;
